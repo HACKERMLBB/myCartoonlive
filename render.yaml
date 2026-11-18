@@ -1,0 +1,18 @@
+services:
+    - type: web
+    name: cartoon-live-bot
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python main.py"
+    envVars:
+            - key: PYTHON_VERSION
+        value: 3.10.0
+            - key: MIXDROP_EMAIL
+        sync: false
+            - key: MIXDROP_API_KEY
+        sync: false
+            - key: TELEGRAM_BOT_TOKEN
+        sync: false
+            - key: TELEGRAM_CHANNEL_ID
+        sync: false
